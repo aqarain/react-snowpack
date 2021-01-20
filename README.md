@@ -1,24 +1,37 @@
-# react-snowpack
+# React Snowpack
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This is a very simple react project build using **Snowpack** instead of Webpack (the default bundler)
 
-## Available Scripts
+## Goal
+The goal of this project is to show how Snowpack can be integrated into a React project and how different it is performance wise from Webpack
 
-### npm start
+## Snowpack
+> ✨ Snowpack is a lightning-fast frontend build tool
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+It is a potential replacement for Webpack or Parcel
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+It has over 16k github stars
 
-### npm run build
+There is almost no learning curve, if you are familiar with Webpack
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+Snowpack claims: 
+> "Once you try it, it's impossible to go back to anything else" 
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
+Turns it, they are right!
 
-### Q: What about Eject?
+## How Snowpack works and why is it better?
+Webpack has a web-server which is used while development. So, whenever you save a file, it rebuilds the entire application, rebundles it and serves it back to the browser.
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+Snowpack, on the other hand, doesn't rebundle the entire app. It only updates/change the file you have changed. Your entire app is cached.
+
+Let's say you make a change to `FileB`, it only rebuilds the `FileB` **But, it only does that when you need it the browser.** So, if that file is not being used in your browser the time you press `ctrl+s`, Snowpack doesn't rebundle anything. **It only rebundles when the browser needs it in the browser.**
+
+
+1. Clone the repo
+2. Run the following command:
+	 ```npm run start``` 
+   ```yarn start```
+  
+  
+Links
+[Snowpack](https://www.snowpack.dev)
