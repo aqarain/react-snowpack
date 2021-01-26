@@ -7,6 +7,16 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "paths": {
+      "app/*": ["app/*"],
+      "store/*": ["store/*"],
+      "services/*": ["services/*"],
+      "utils/*": ["utils/*"],
+      "styles/*": ["styles/*"],
+      "assets/*": ["assets/*"],
+      "libs/*": ["libs/*"]
+    }
   }
 }
